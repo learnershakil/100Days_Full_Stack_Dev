@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage that contains all HTML5 tags for demonstration purposes.">
+    <title>HTML5 Tags Reference</title>
+    <base href="/">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Tags Reference</h1>
+    <nav>
+        <ul>
+            <li><a href="#document-structure">Document Structure</a></li>
+            <li><a href="#metadata">Metadata</a></li>
+            <li><a href="#scripting">Scripting</a></li>
+            <li><a href="#sections">Sections</a></li>
+            <li><a href="#grouping-content">Grouping Content</a></li>
+            <li><a href="#text-level-semantics">Text-Level Semantics</a></li>
+            <li><a href="#edits">Edits</a></li>
+            <li><a href="#embedded-content">Embedded Content</a></li>
+            <li><a href="#tabular-data">Tabular Data</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#interactive-elements">Interactive Elements</a></li>
+            <li><a href="#deprecated-tags">Deprecated Tags</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="document-structure">
+        <h2>Document Structure</h2>
+        <p>The following are the basic document structure tags in HTML5.</p>
+        <p>This document uses <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;style&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
+    </section>
+
+    <section id="metadata">
+        <h2>Metadata</h2>
+        <p>Metadata tags include <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, and <code>&lt;style&gt;</code>.</p>
+    </section>
+
+    <section id="scripting">
+        <h2>Scripting</h2>
+        <p>Examples of scripting tags:</p>
+        <script>
+            document.write("This is a <code>&lt;script&gt;</code> tag in action.");
+        </script>
+        <noscript>Your browser does not support JavaScript.</noscript>
+        <template>
+            <p>This is a template content.</p>
+        </template>
+        <canvas>Canvas not supported.</canvas>
+    </section>
+
+    <section id="sections">
+        <h2>Sections</h2>
+        <article>
+            <h3>Article Section</h3>
+            <p>This is an example of an <code>&lt;article&gt;</code> element.</p>
+        </article>
+        <aside>
+            <h3>Aside Section</h3>
+            <p>This is an example of an <code>&lt;aside&gt;</code> element.</p>
+        </aside>
+        <footer>
+            <h3>Footer Section</h3>
+            <p>This is an example of a <code>&lt;footer&gt;</code> element.</p>
+        </footer>
+    </section>
+
+    <section id="grouping-content">
+        <h2>Grouping Content</h2>
+        <p>This is a <code>&lt;p&gt;</code> tag.</p>
+        <hr>
+        <pre>This is a preformatted text.</pre>
+        <blockquote>This is a blockquote.</blockquote>
+        <ol>
+            <li>Ordered list item 1</li>
+            <li>Ordered list item 2</li>
+        </ol>
+        <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+        </ul>
+        <dl>
+            <dt>Definition Term</dt>
+            <dd>Definition Description</dd>
+        </dl>
+        <figure>
+            <img src="example.jpg" alt="Example Image">
+            <figcaption>This is a caption for the image.</figcaption>
+        </figure>
+        <div>This is a <code>&lt;div&gt;</code> element.</div>
+    </section>
+
+    <section id="text-level-semantics">
+        <h2>Text-Level Semantics</h2>
+        <p><a href="#">This is a hyperlink.</a></p>
+        <p><em>This text is emphasized.</em></p>
+        <p><strong>This text is strong.</strong></p>
+        <p><small>This text is small.</small></p>
+        <p><s>This text is no longer correct.</s></p>
+        <p><cite>This is a citation.</cite></p>
+        <p><q>This is a short quotation.</q></p>
+        <p><dfn>This is a definition term.</dfn></p>
+        <p><abbr title="Abbreviation">This is an abbreviation.</abbr></p>
+        <p>
+            <ruby>
+                Sitare <rt>sam</rt> <rp>(</rp><rt>ms</rt><rp>)</rp>
+            </ruby>
+        </p>
+        <p><data value="example">This is a data element.</data></p>
+        <p><time datetime="2024-06-08">This is a time element.</time></p>
+        <p><code>This is a code element.</code></p>
+        <p><var>x</var> = <var>y</var> + 2</p>
+        <p><samp>This is sample output.</samp></p>
+        <p><kbd>This is keyboard input.</kbd></p>
+        <p>This is <sub>subscript</sub> text.</p>
+        <p>This is <sup>superscript</sup> text.</p>
+        <p><i>This is italic text.</i></p>
+        <p><b>This is bold text.</b></p>
+        <p><u>This is underlined text.</u></p>
+        <p><mark>This text is marked or highlighted.</mark></p>
+        <p><bdi>Bi-directional isolated text.</bdi></p>
+        <p><bdo dir="rtl">This text is right-to-left.</bdo></p>
+        <p>This is a <span>span</span> element.</p>
+        <p>This is a line break<br>within a paragraph.</p>
+        <p>This is a possible<wbr>line break.</p>
+    </section>
+
+    <section id="edits">
+        <h2>Edits</h2>
+        <p><ins>This text has been inserted.</ins></p>
+        <p><del>This text has been deleted.</del></p>
+    </section>
+
+    <section id="embedded-content">
+        <h2>Embedded Content</h2>
+        <img src="example.jpg" alt="Example Image">
+        <iframe src="https://www.example.com" title="Example iframe"></iframe>
+        <embed src="example.svg" type="image/svg+xml">
+        <object data="example.pdf" type="application/pdf">
+            <param name="param1" value="value1">
+        </object>
+        <video controls>
+            <source src="example.mp4" type="video/mp4">
+            <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+            Your browser does not support the video tag.
+        </video>
+        <audio controls>
+            <source src="example.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <map name="example-map">
+            <area shape="rect" coords="34,44,270,350" alt="Example Area" href="https://www.example.com">
+        </map>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+        <math>
+            <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+            </msup>
+        </math>
+    </section>
+
+    <section id="tabular-data">
+        <h2>Tabular Data</h2>
+        <table>
+            <caption>Example Table</caption>
+            <colgroup>
+                <col span="2" style="background-color:yellow">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1
