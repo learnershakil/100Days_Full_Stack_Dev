@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
     res.send(sum.toString());
 });
 
+app.get('/greet',(req,res)=>{
+    const name = req.query.name;
+    res.send(`Hello ${name}`);
+})
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
