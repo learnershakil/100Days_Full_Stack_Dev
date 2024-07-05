@@ -15,11 +15,32 @@
     <script>
         let id = 0; // unique id for each todo item
 
+        function createChild(title, description, id){
+            const child = document.createElement('div');
+            child.id = `todo-${id}`;
+            const titleElement = document.createElement('h2');
+            titleElement.innerHTML = title;
+            const descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = description;
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'delete';
+            deleteButton.setAttribute('onclick', `deleteTodo(${id})`);
+            const markButton = document.createElement('button');
+            markButton.innerHTML = 'Mark done!';
+            markButton.setAttribute('onclick', `doneTodo(${id})`);
+            child.appendChild(titleElement);
+            child.appendChild(descriptionElement);
+            child.appendChild(deleteButton);
+            child.appendChild(markButton);
+            return child;
+        }
+
         function add() {
-            const title = document.querySelector('#title');
-            const description = document.querySelector('#description');
-            const todo = document.querySelector('#todo').innerHTML;
-            document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button><button id="mark-${id}" onclick="doneTodo(${id})">Mark done!</button></div>`;
+            const title = document.querySelector('#title').value;
+            const description = document.querySelector('#description').value;
+            const todo = document.querySelector('#todo');
+            // document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button><button id="mark-${id}" onclick="doneTodo(${id})">Mark done!</button></div>`;
+            todo.appendChild(createChild(title, description, id));
             id++;
         }
 
