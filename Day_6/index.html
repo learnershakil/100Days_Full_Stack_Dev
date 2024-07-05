@@ -35,13 +35,21 @@
             return child;
         }
 
-        function add() {
-            const title = document.querySelector('#title').value;
-            const description = document.querySelector('#description').value;
+        // function add() {
+        //     const title = document.querySelector('#title').value;
+        //     const description = document.querySelector('#description').value;
+        //     const todo = document.querySelector('#todo');
+        //     // document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button><button id="mark-${id}" onclick="doneTodo(${id})">Mark done!</button></div>`;
+        //     todo.appendChild(createChild(title, description, id));
+        //     id++;
+        // }
+
+        function updateDomAccToState(state){
             const todo = document.querySelector('#todo');
-            // document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button><button id="mark-${id}" onclick="doneTodo(${id})">Mark done!</button></div>`;
-            todo.appendChild(createChild(title, description, id));
-            id++;
+            todo.innerHTML = '';
+            state.forEach(todoItem => {
+                todo.appendChild(createChild(todoItem.title, todoItem.description, todoItem.id));
+            });
         }
 
         function deleteTodo(id) {
@@ -55,6 +63,12 @@
             const markButton = document.querySelector(`#mark-${id}`);
             markButton.remove();
         }
+
+        window.setInterval(async ()=>{
+            const res = await fetch("https://localhost:3000/todos");
+            const data = await res.json();
+            updateDomAccToState(data.todos);
+        },1000)
     </script>
 
 </html>
