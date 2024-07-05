@@ -19,13 +19,20 @@
             const title = document.querySelector('#title');
             const description = document.querySelector('#description');
             const todo = document.querySelector('#todo').innerHTML;
-            document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button></div>`;
+            document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button><button id="mark-${id}" onclick="doneTodo(${id})">Mark done!</button></div>`;
             id++;
         }
 
         function deleteTodo(id) {
             const todoItem = document.querySelector(`#todo-${id}`);
             todoItem.remove();
+        }
+
+        function doneTodo(id) {
+            const todoItem = document.querySelector(`#todo-${id}`);
+            todoItem.style.textDecoration = 'line-through';
+            const markButton = document.querySelector(`#mark-${id}`);
+            markButton.remove();
         }
     </script>
 
