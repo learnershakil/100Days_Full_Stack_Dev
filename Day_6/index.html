@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>todo</title>
 </head>
@@ -14,13 +13,20 @@
     </div>
     <div id="todo"></div>
     <script>
-        function add(){
-        const title = document.querySelector('#title');
-        const description = document.querySelector('#description');
-        const todo = document.querySelector('#todo');
-        document.querySelector('#todo').innerHTML =`<h2>${title.value}</h2><p>${description.value}<p><br><button onclick="delete()">delete</button>`
+        let id = 0; // unique id for each todo item
+
+        function add() {
+            const title = document.querySelector('#title');
+            const description = document.querySelector('#description');
+            const todo = document.querySelector('#todo').innerHTML;
+            document.querySelector('#todo').innerHTML = todo + `<div id="todo-${id}"><h2>${title.value}</h2><p>${description.value}</p><br><button onclick="deleteTodo(${id})">delete</button></div>`;
+            id++;
+        }
+
+        function deleteTodo(id) {
+            const todoItem = document.querySelector(`#todo-${id}`);
+            todoItem.remove();
         }
     </script>
-</body>
 
 </html>
