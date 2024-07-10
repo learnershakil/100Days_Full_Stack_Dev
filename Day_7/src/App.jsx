@@ -6,13 +6,21 @@ function App() {
 
   return (
     <>
-    <h1>Welcome to react</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+    <CustomButton count={count} setCount={setCount}></CustomButton>
+    <CustomButton count={count + 1} setCount={setCount}></CustomButton>
+    <CustomButton count={count - 1} setCount={setCount}></CustomButton>
+    <CustomButton count={count * 100} setCount={setCount}></CustomButton>
     </>
+  )
+}
+
+function CustomButton(prop) {
+  function handleClick() {
+    prop.setCount(prop.count + 1)
+  }
+
+  return (
+    <button onClick={handleClick}>{prop.count}</button>
   )
 }
 
