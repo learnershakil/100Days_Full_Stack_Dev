@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [value, setValue] = useState('Learner')
   function randomValue() {
-    setValue(Math.random())
+    setValue(Math.floor(Math.random()*100)+1)
   }
 
   return (
