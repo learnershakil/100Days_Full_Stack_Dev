@@ -2,16 +2,24 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  return (
+    <>
+      <Header data='React' />
+      <HeaderwithButton />
+    </>
+  )
+}
+
+function HeaderwithButton() {
   const [value, setValue] = useState('Learner')
   function randomValue() {
     setValue(Math.floor(Math.random()*100)+1)
   }
-
-  return (
+  return(
     <>
-      <Header data={value} /> 
-      <Header data='React' />
-      <button onClick={randomValue}>random value</button>
+    <Header data={value} /> 
+    <button onClick={randomValue}>random value</button>
     </>
   )
 }
