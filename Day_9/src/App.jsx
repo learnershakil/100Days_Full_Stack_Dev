@@ -37,7 +37,7 @@ function Header({ data }) {
   )
 }
 
-const DynamicHeader = React.memo(({data})=> {
+const DynamicHeader = React.memo(function Header({data}){
   return(
     <h2>Hey I'm {data}</h2> 
   )
