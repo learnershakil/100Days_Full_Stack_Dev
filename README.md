@@ -54,9 +54,9 @@ Contributions are welcome! If you have improvements, suggestions, or additional 
 Have questions or want to share your progress? Connect with us on:
 
 - 🌐 Website: [learnershakil.rf.gd](https://learnershakil.rf.gd)
-- 📧 Email: [dev.shakilahmad@gmail.com](mailto:dev.shakilahmad@gmail.com)
+- 📧 Email: [learnershakil@gmail.com](mailto:learnershakil@gmail.com)
 - 💼 LinkedIn: [Shakil Ahmad](https://www.linkedin.com/in/learnershakil/)
-- 📸 Instagram: [\_mr.learner\_](https://www.instagram.com/_mr.learner_/)
+- 📸 Instagram: [learnershakil](https://www.instagram.com/learnershakil/)
 - 🐙 GitHub: [learnershakil](https://github.com/learnershakil)
 - 🐦 Twitter: [@learnershakil](https://x.com/learnershakil)
 
