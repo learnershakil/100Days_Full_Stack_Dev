@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import Navbar from "./Navbar";
 
 function App() {
   const [todos, setTodos] = useState([{
@@ -27,6 +28,9 @@ function App() {
 
   return (
     <>
+    <div className="app">
+      <Navbar />
+    </div>
     <button onClick={Addtodo}>Add todos</button>
     {todos.map(todo => <Todo key={todo.id} title={todo.title} description={todo.description}/>)}
     </>
